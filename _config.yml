@@ -17,8 +17,8 @@ title: Everything Engineering
 email: owner@pjbollinger.com
 description: > # this means to ignore newlines until "baseurl:"
   As Patrick Bollinger explores the world of engineering, this
-  blog is to support Patrick's wondering mind on various topics.
-  Topics can include software, electronics, and social aspects to life.
+  blog is to support Patrick's wandering mind on various topics such as
+  software, electronics, and social aspects to life.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pjbollinger.github.io" # the base hostname & protocol for your site
 twitter_username: pjbollinger
