@@ -20,9 +20,11 @@ description: > # this means to ignore newlines until "baseurl:"
   blog is to support Patrick's wandering mind on various topics such as
   software, electronics, and social aspects of life.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pjbollinger.github.io" # the base hostname & protocol for your site
+url: "https://pjbollinger.com" # the base hostname & protocol for your site
+enforce_ssl: pjbollinger.com
 twitter_username: pjbollinger
 github_username:  pjbollinger
+google_analytics: UA-84681622-1
 
 # Build settings
 markdown: kramdown
