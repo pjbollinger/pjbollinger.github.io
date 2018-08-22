@@ -1,23 +1,308 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="home">
+  <head>
 
-  <h1 class="page-heading">Posts</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <title>Patrick Bollinger - Portfolio</title>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- Custom styles for this template -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
 
-</div>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Patrick Bollinger</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Portfolio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>-->
+            <!--<li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Programming Projects
+        <!--<small>Secondary Text</small>-->
+      </h1>
+
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-6">
+          <!--<a href="#">-->
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/tuning_optimization.png" alt="Screenshot of code.">
+          <!--</a>-->
+        </div>
+        <div class="col-md-6">
+          <h3>Tuning Optimization</h3>
+          <p>2017-2018 &mdash; Python</p>
+          <p>Vehicle Wireless Charging has a critical system called the Impedance Matching Network (IMN). I developed a Python script to best optimize the IMN based on system requirements. This script utilizes the Python's <code>multiprocessing</code> library to make decisions quickly.</p>
+          <!--<a class="btn btn-primary" href="#">View Project</a>-->
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Two -->
+      <div class="row">
+        <div class="col-md-6">
+          <!--<a href="#">-->
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/tuning_calculator.png" alt="Screenshot of Tuning Calculator application.">
+          <!--</a>-->
+        </div>
+        <div class="col-md-6">
+          <h3>Tuning Calculator</h3>
+          <p>2018 &mdash; Python</p>
+          <p>Due to the complex topology of Vehicle Wireless Charging's Impedance Matching Network, it is difficult for engineers to not know what is happening electrically in the system. I created this tool to help aid both internal engineers and engineers of our customers. I used the <code>tkinter</code> library to update values as parameters are changed.</p>
+          <!--<a class="btn btn-primary" href="#">View Project</a>-->
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <!--<a href="#">-->
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/crypto_analysis.png" alt="Scatterplot graph that resembles a checkmark.">
+          <!--</a>-->
+        </div>
+        <div class="col-md-6">
+          <h3>Stock/Cryptocurrency Trading & Analysis</h3>
+          <p>2016-2018 &mdash; Python (Pandas), Excel</p>
+          <p>For fun, I do some number crunching and test out ideas for trading algorithms in Python and Excel. No get-rich-quick ideas yet. 😅</p>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <a href="portfolio/index.html" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/crypto_portfolio.png" alt="Screenshot of cryptocurrency portfolio.">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>Cryptocurrency Live Portfolio</h3>
+          <p>2017-2018 &mdash; JavaScript (Websockets)</p>
+          <p>I created this so my wife and I can easily collect the data of our cryptocurrency investments. It hooks into websockets so prices will update as trades complete in the market.</p>
+          <a class="btn btn-primary" href="portfolio/index.html" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Three -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <a href="https://github.com/DeviaVir/zenbot/pulls?q=is%3Apr+is%3Aclosed+author%3Apjbollinger" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/zenbot.png" alt="Zenbot logo">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>Zenbot</h3>
+          <p>2017 &mdash; JavaScript (Node.js)</p>
+          <p>Zenbot is an open source Node.js program meant to simulate and actually trade on a given cryptocurrency trading platform. I fixed the <code>mirror/symmetrical</code> functionality for running simulations.</p>
+          <a class="btn btn-primary" href="https://github.com/DeviaVir/zenbot/pulls?q=is%3Apr+is%3Aclosed+author%3Apjbollinger" target="_blank">View Pull Requests</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Four -->
+      <div class="row">
+        <div class="col-md-6">
+          <a href="https://github.com/pjbollinger?tab=overview" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/hacktoberfest.jpg" alt="Photo of Hacktoberfest swag.">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>Hacktoberfest</h3>
+          <p>2016-2017 &mdash; Python, Documentation</p>
+          <p>Contributed to various open source projects on GitHub, primarily supporting documentation and implementing CI.</p>
+          <a class="btn btn-primary" href="https://github.com/pjbollinger?tab=overview" target="_blank">View GitHub Profile</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Five -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <a href="http://pajamaprogramming.com/kittehParadise/" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/kitteh_paradise.png" alt="Screenshot of the main menu of Kitteh Paradise.">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>April Fool's Game Jam</h3>
+          <p>2017 &mdash; JavaScript</p>
+          <p>My wife and I developed a game for a local game jam (48 hour competition) using Phasor.js. I focused on assets to let my wife practice her programming skills.</p>
+          <a class="btn btn-primary" href="http://pajamaprogramming.com/kittehParadise/" target="_blank">Play Kitteh Paradise (Warning: Audio)</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Six -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <a href="http://pajamaprogramming.com" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/honey_beebop.png" alt="Screenshot of the game Honey Beebop.">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>Ludum Dare Game Jam</h3>
+          <p>2014-2016 &mdash; JavaScript, C#</p>
+          <p>Ludum Dare Game Jam is a 72 hour competition for building a game from scratch. It has proved to be a great opportuntiy for learning new skills for my wife and I.</p>
+          <a class="btn btn-primary" href="http://pajamaprogramming.com" target="_blank">Play our first game, Honey BeeBop</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Seven -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <a href="https://bollinger.wedding/" target="_blank">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/wedding_rsvp.png" alt="Screenshot of Wedding RSVP site.">
+          </a>
+        </div>
+        <div class="col-md-6">
+          <h3>Wedding RSVP</h3>
+          <p>2016 &mdash; PHP, MySQL, JavaScript</p>
+          <p>My wife and I created our own RSVP system for our wedding invitations. I focused on the backend (PHP/MySQL) while she focused on the frontend (HTML/CSS/JavaScript).</p>
+          <a class="btn btn-primary" href="https://bollinger.wedding/" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Eight -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <!--<a href="#">-->
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/minecraft_plugins.png" alt="Screenshot of code.">
+          <!--</a>-->
+        </div>
+        <div class="col-md-6">
+          <h3>Minecraft Server Plugins / Mods</h3>
+          <p>2011-2015 &mdash; Java, AWS</p>
+          <p>I am the owner of a Minecraft server and I created a number of plugins to help adminster the server. Plugins includes the following; censorship of inappropriate words, user stats/analytics, user notification of logins.</p>
+          <!--<a class="btn btn-primary" href="https://github.com/pulls?q=is%3Apr+author%3Apjbollinger+archived%3Afalse+is%3Aclosed+updated%3A2016-10-01..2016-10-31">View Pull Requests</a>-->
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Project Nine -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <!--<a href="#">-->
+            <img class="img-fluid rounded mb-3 mb-md-0" src="images/benchmarking_template.png" alt="Screenshot of Excel document demonstrating Benchmarking Template.">
+          <!--</a>-->
+        </div>
+        <div class="col-md-6">
+          <h3>Harness Benchmarking</h3>
+          <p>2014 &mdash; Excel VBA</p>
+          <p>My internship for the summer involved benchmarking various harnesses of competititors. This can be a tedious task for data entry, so I developed an improved Excel document that utilized VBA macros.</p>
+          <!--<a class="btn btn-primary" href="https://bollinger.wedding/" target="_blank">View Demo</a>-->
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Pagination -->
+      <!--
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+      -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Patrick Bollinger 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
