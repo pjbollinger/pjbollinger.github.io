@@ -20,6 +20,17 @@ gulp.task('vendor', function() {
     ])
     .pipe(gulp.dest('./vendor/jquery'))
 
+  // FontAwesome CSS
+  gulp.src([
+    './node_modules/@fortawesome/fontawesome-free/css/*.min.css',
+  ])
+  .pipe(gulp.dest('./vendor/fontawesome/css'))
+  // FontAwesome Webfonts
+  gulp.src([
+    './node_modules/@fortawesome/fontawesome-free/webfonts/*',
+  ])
+  .pipe(gulp.dest('./vendor/fontawesome/webfonts'))
+
 })
 
 // Default task

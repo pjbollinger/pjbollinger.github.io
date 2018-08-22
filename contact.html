@@ -12,6 +12,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FonteAwesome CSS -->
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/1-col-portfolio.css" rel="stylesheet">
@@ -29,8 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./index.html">Portfolio</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Projects</a>
             </li>
             <!--<li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -38,7 +41,7 @@
             <!--<li class="nav-item">
               <a class="nav-link" href="#">Services</a>
             </li>-->
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="./contact.html">Contact
                 <span class="sr-only">(current)</span>
               </a>
@@ -67,12 +70,17 @@
       method="POST">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Enter name">
+          <input type="text" name="name" placeholder="Your name">
         </div>
         <div class="form-group">
           <label for="_replyto">Email address</label>
-          <input type="email" name="_replyto" placeholder="Enter email">
+          <input type="email" name="_replyto" placeholder="Your email">
         </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Your message"></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" />
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
@@ -85,6 +93,7 @@
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Patrick Bollinger 2018</p>
+        <p class="m-0 text-center text-white"><a href="https://twitter.com/pjbollinger" class="text-white" target="_blank"><i class="fab fa-twitter"></i></a>&emsp;<a href="https://www.linkedin.com/in/pjbollinger/" class="text-white" target="_blank"><i class="fab fa-linkedin"></i></a>&emsp;<a href="https://github.com/pjbollinger" class="text-white" target="_blank"><i class="fab fa-github"></i></a>&emsp;<a href="./contact.html" class="text-white"><i class="far fa-envelope"></i></a></p>
       </div>
       <!-- /.container -->
     </footer>
