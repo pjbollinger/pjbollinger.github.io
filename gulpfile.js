@@ -1,9 +1,8 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var pkg = require('./package.json');
 
 // Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
+gulp.task('vendor', function(done) {
 
   // Bootstrap
   gulp.src([
@@ -31,10 +30,11 @@ gulp.task('vendor', function() {
   ])
   .pipe(gulp.dest('./vendor/fontawesome/webfonts'))
 
-})
+  done();
+});
 
 // Default task
-gulp.task('default', ['vendor']);
+gulp.task('default', gulp.series('vendor'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -46,7 +46,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-gulp.task('dev', ['browserSync'], function() {
+gulp.task('dev', gulp.series('browserSync', function() {
   gulp.watch('./css/*.css', browserSync.reload);
   gulp.watch('./*.html', browserSync.reload);
-});
+}));
