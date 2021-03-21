@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.css" integrity="sha256-eTXm0PcnjHYM1YDUkEQ3vYfZxF1BffpYGWz2lFqmCrg=" crossorigin="anonymous">
+
+        <title>Compensation Calculator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Compensation Calculator</h1>
+
+            <p>
+                Switching to a new job can be hard and one of the hardest parts is making sure that your compensation is not being compromised by taking on a new position.
+                This utility app is designed to help get all variables on the table to easily view what is your total compensation now and compare it to another offer.
+            </p>
+            <p>
+                To get started, please grab your latest paycheck so you can easily reference numbers from there.
+            </p>
+            <p>
+                All information entered is never stored either locally or on a server.
+                Once you refresh this page, all entered data <strong>will</strong> disappear.
+            </p>
+
+            <br />
+
+            <h2>Calculator</h2>
+            <form>
+
+                <h3>Income</h3>
+                <div class="form-group">
+                    <label for="pay_frequency">How often do you get paid?</label>
+                    <select class="form-control" name="pay_frequency" id="pay_frequency">
+                        <option value="52">Weekly (~52 paychecks per year)</option>
+                        <option value="24">Every other week (~24 paychecks per year)</option>
+                        <option value="24">Twice a month (24 paychecks per year)</option>
+                        <option value="12">Once a month (12 paychecks per year)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gross_pay">What was your gross pay on your last paycheck?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" name="gross_pay" id="gross_pay" pattern="[0-9]+(\.[0-9]+)?" placeholder="0.00" required />
+                      </div>
+                    <small class="form-text text-muted">This is the amount before taxes are taken out.</small>
+                </div>
+                <div class="form-group">
+                    <label for="additional_pay">How much additional income do you get per year?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" name="additional_pay" id="additional_pay" placeholder="0.00" pattern="[0-9]+(\.[0-9]+)?" />
+                      </div>
+                    <small class="form-text text-muted">This could be bonuses or any other one-time payments you typically receive.</small>
+                </div>
+                <div class="form-group">
+                    <label for="additional_match">How much does your company match for retirement (example: 401k)?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="additional_match" id="additional_match" placeholder="0.0" pattern="[0-9]+(\.[0-9]+)?" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="days_off">How many days off does your company offer?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="days_off" id="days_off" placeholder="0" pattern="[0-9]+(\.[0-9]+)?" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">days</div>
+                        </div>
+                    </div>
+                    <small class="form-text text-muted">You may get partial days so <em>2.5 days</em> is a valid entry. This should include all holidays, paid time off, sick days, etc.</small>
+                </div>
+
+                <h3>Work and Travel Information</h3>
+                <div class="form-group">
+                    <label for="hours_work_per_day">How many hours are you expected to work per day?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="hours_work_per_day" id="hours_work_per_day" value="8" pattern="[0-2]?[0-9]" required />
+                        <div class="input-group-append">
+                            <div class="input-group-text">hours per day</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="days_work_per_week">How many days a week are you expected to work?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="days_work_per_week" id="days_work_per_week" value="5" pattern="[0-7]" required />
+                        <div class="input-group-append">
+                            <div class="input-group-text">days per week</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="remote_days">How many days a week do you get to work remotely?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="remote_days" id="remote_days" placeholder="0" pattern="[0-9]+(\.[0-9]+)?" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">days</div>
+                        </div>
+                    </div>
+                    <small class="form-text text-muted">You may get partial remote days so <em>2.5 days</em> is a valid entry.</small>
+                </div>
+                <div class="form-group">
+                    <label for="distance_to_work">How many miles do you have to drive to get to work, <strong>one-way</strong>?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="distance_to_work" id="distance_to_work" placeholder="0" pattern="[0-9]+(\.[0-9]+)?" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">miles</div>
+                        </div>
+                    </div>
+                    <small class="form-text text-muted">This is only for one-way so please do <em>not</em> double the number.</small>
+                </div>
+                <div class="form-group">
+                    <label for="time_to_work">How many minutes does it take to get to work <strong>one-way</strong>?</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="time_to_work" id="time_to_work" placeholder="0" pattern="[0-9]+(\.[0-9]+)?" />
+                        <div class="input-group-append">
+                            <div class="input-group-text">minutes</div>
+                        </div>
+                    </div>
+                    <small class="form-text text-muted">This is only for one-way so please do <em>not</em> double the number.</small>
+                </div>
+                <div class="form-group">
+                    <label for="mileage_rate">What is the current IRS rate for mileage?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" name="mileage_rate" id="mileage_rate" pattern="[0-9]+(\.[0-9]+)?" value="0.56" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">per mile</span>
+                        </div>
+                      </div>
+                    <small class="form-text text-muted">
+                        For 2021, the rate is $0.56 per mile. Find the latest value here (opens in a new tab/window):
+                        <a target="_blank" href="https://www.irs.gov/tax-professionals/standard-mileage-rates">https://www.irs.gov/tax-professionals/standard-mileage-rates</a>
+                    </small>
+                </div>
+
+                <h3>Insurance Coverage</h3>
+                <p>Insert insurance stuff here, it's complicated...</p>
+            </form>
+
+            <br />
+
+            <h2>Results</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Annualized Values ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Gross Salary</th>
+                        <td id="annual-salary"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Additional Compensation</th>
+                        <td id="annual-additional"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Employer Match</th>
+                        <td id="annual-match"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Paid Time Off/Holidays</th>
+                        <td id="annual-time-off"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Mileage</th>
+                        <td id="annual-mileage-distance" class="text-danger"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Time Driving</th>
+                        <td id="annual-mileage-time" class="text-danger"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Annual Total Compensation</th>
+                        <td><strong id="total-compensation"></strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br />
+
+            <h2>Formulas</h2>
+
+            <h3>Gross Salary</h3>
+            <p>
+                \[
+                    \text{Gross Pay per Paycheck}
+                    *
+                    \text{Paychecks per Year}
+                \]
+            </p>
+
+            <h3>Additional Compensation</h3>
+            <p>
+                \[
+                    \text{Additional Compensation per Year}
+                \]
+            </p>
+
+            <h3>Employer Match</h3>
+            <p>
+                \[
+                    (
+                        \text{Annual Gross Pay}
+                        +
+                        \text{Additional Compensation per Year}
+                    )
+                    *
+                    \text{Employer Match (%)}
+                \]
+            </p>
+
+            <h3>Paid Time Off/Holidays</h3>
+            <p>
+                \[
+                    \text{Days Off per Year}
+                    *
+                    {
+                        \text{Annual Gross Pay}
+                        \over
+                        {
+                            (
+                                52
+                                *
+                                \text{Days Expected to Work per Week}
+                            )
+                        }
+                    }
+                \]
+            </p>
+
+            <h3>Mileage</h3>
+            <p>
+                \[
+                    2
+                    *
+                    \text{Miles one-way}
+                    *
+                    \text{Days Actually Worked On-Site per Year}
+                    *
+                    \text{Mileage Rate from IRS}
+                \]
+            </p>
+
+            <h3>Time Driving</h3>
+            <p>
+                \[
+                    2
+                    *
+                    \text{Minutes one-way}
+                    *
+                    {
+                        \text{1 hour}
+                        \over
+                        \text{60 minutes}
+                    }
+                    *
+                    {
+                        \text{Annual Gross Pay}
+                        \over
+                        \text{Expected Hours per Year}
+                    }
+                    *
+                    \text{Days Actually Worked On-Site per Year}
+                \]
+            </p>
+
+            <h3>Total Compensation</h3>
+            <p>
+                \[
+                    (
+                        \text{Gross Pay}
+                        +
+                        \text{Additional Compensation}
+                        +
+                        \text{Annualized Employer Match (\$)}
+                        +
+                        \text{Paid Time Off (\$)}
+                    )
+                    -
+                    (
+                        \text{Mileage}
+                        +
+                        \text{Time Driving}
+                    )
+                \]
+            </p>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/currency.js@2.0.3/dist/currency.min.js" integrity="sha256-WGXmCGFm1BJY0ZVHoBOl15eOyHz4ICCwbaNyP6DHtbQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.js" integrity="sha256-td6P1QUYAAFY5+P65BtIz+WFguz8yxtTua3p5yJMIjc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.js" integrity="sha256-/MqPdltDqe7iSoqjNkMb7+w1uk5FJdOpIS7YErWktBQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js" integrity="sha256-NQFNlPEZ25KOvT1N5ACll1R64Ny+cq7jqHW097fGqi4=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>
