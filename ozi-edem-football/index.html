@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozi-Edem Community Football Association</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #66ad70;
+            color: white;
+        }
+
+        header {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #66ad70;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #66ad70;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: white;
+            color: black;
+            border-radius: 8px;
+        }
+
+        .teams {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .team {
+            text-align: center;
+        }
+
+        .team img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .players {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .players img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: #66ad70;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ozi-Edem Community Football Association (OCFA)</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#teams">Teams</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About the Association</h2>
+        <p>The objectives of the OCFA are:</p>
+        <ul>
+            <li>To promote harmony and unity within the Ozi-Edem community.</li>
+            <li>To discover and develop football talent among youths.</li>
+            <li>To instill discipline, respect, and responsibility through sports.</li>
+            <li>To organize competitive and recreational football activities for community engagement.</li>
+        </ul>
+    </section>
+
+    <section id="schedule" class="section">
+        <h2>EXAMPLES of Upcoming Matches</h2>
+        <ul>
+            <li>Amaogu vs Umuoko - February 10, 2025</li>
+            <li>Ezi-Ozi vs Amaudo - February 17, 2025</li>
+            <li>Amaogu vs Ezi-Ozi - February 24, 2025</li>
+            <li>Umuoko vs Amaudo - March 3, 2025</li>
+        </ul>
+    </section>
+
+    <section id="teams" class="section">
+        <h2>Our Teams</h2>
+        <div class="teams">
+            <div class="team">
+                <h3>Amaogu</h3>
+                <img src="amaogu.jpg" alt="Amaogu Team">
+                <p>The Amaogu team is known for their speed and agility on the field.</p>
+                <div class="players">
+                    <h4>Players:</h4>
+                    <p><img src="player1.jpg" alt="Player 1"> John Doe</p>
+                    <p><img src="player2.jpg" alt="Player 2"> Alex Smith</p>
+                </div>
+            </div>
+            <div class="team">
+                <h3>Umuoko</h3>
+                <img src="umuoko.jpg" alt="Umuoko Team">
+                <p>Umuoko players excel in teamwork and strategic play.</p>
+                <div class="players">
+                    <h4>Players:</h4>
+                    <p><img src="player3.jpg" alt="Player 3"> Jane Doe</p>
+                    <p><img src="player4.jpg" alt="Player 4"> Mike Johnson</p>
+                </div>
+            </div>
+            <div class="team">
+                <h3>Ezi-Ozi</h3>
+                <img src="ezi-ozi.jpg" alt="Ezi-Ozi Team">
+                <p>Ezi-Ozi brings power and precision to every match.</p>
+                <div class="players">
+                    <h4>Players:</h4>
+                    <p><img src="player5.jpg" alt="Player 5"> Sarah Brown</p>
+                    <p><img src="player6.jpg" alt="Player 6"> David Wilson</p>
+                </div>
+            </div>
+            <div class="team">
+                <h3>Amaudo</h3>
+                <img src="amaudo.jpg" alt="Amaudo Team">
+                <p>Amaudo is celebrated for their resilience and dedication.</p>
+                <div class="players">
+                    <h4>Players:</h4>
+                    <p><img src="player7.jpg" alt="Player 7"> Emma White</p>
+                    <p><img src="player8.jpg" alt="Player 8"> Chris Green</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ozi-Edem Community Football Association</p>
+    </footer>
+</body>
+</html>
